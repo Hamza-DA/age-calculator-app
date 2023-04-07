@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+  <meta name="description" content="This is a solution to the Age calculator app challenge on Frontend Mentor">
+  <meta name="og:title" property="og:title" content="Frontend Mentor | Age calculator app">
+  <meta name="og:description" property="og:title"
+    content="This is a solution to the Age calculator app challenge on Frontend Mentor">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen overflow-x-hidden bg-Off-white">
+  <main
+    class="bg-white rounded-3xl md:rounded-br-[12rem]  shadow-Light-grey px-10 py-16 gap-4 flex flex-col w-[90%] max-w-2xl">
+
+
+
+
+    <div class="flex gap-4 md:gap-6">
+      <div class="flex flex-col md:w-36">
+        <label id="days-header"
+          class="uppercase font-semibold text-Smokey-grey tracking-[0.3em] text-xs md:text-sm mb-2 transition"
+          for="day">day</label>
+        <input
+          class="border-Light-grey border-[1px] rounded-lg cursor-pointer px-5 py-3 text-Off-black font-bold text-2xl w-full focus:border-Purple outline-none transition"
+          type="text" name="day" placeholder="DD" id="days-input">
+        <span id="days-error-message" class="hidden mt-2 text-xs text-Light-red font-normal italic"></span>
+      </div>
+      <div class="flex flex-col md:w-36">
+        <label id="months-header"
+          class="uppercase font-semibold text-Smokey-grey tracking-[0.3em] text-xs md:text-sm mb-2 transition"
+          for="month">month</label>
+        <input
+          class="border-Light-grey border-[1px] rounded-lg cursor-pointer px-5 py-3 text-Off-black font-bold text-2xl w-full focus:border-Purple outline-none transition"
+          type="text" name="month" placeholder="MM" id="months-input">
+        <span id="months-error-message" class="hidden mt-2 text-xs text-Light-red font-normal italic">Must be a valid
+          date</span>
+      </div>
+      <div class="flex flex-col md:w-36">
+        <label id="years-header"
+          class="uppercase font-semibold text-Smokey-grey tracking-[0.3em] text-xs md:text-sm mb-2 transition"
+          for="year">year</label>
+        <input
+          class="border-Light-grey border-[1px] rounded-lg cursor-pointer px-5 py-3 text-Off-black font-bold text-2xl w-full  focus:border-Purple outline-none transition"
+          type="text" name="year" placeholder="YYYY" id="years-input">
+        <span id="years-error-message" class="hidden mt-2 text-xs text-Light-red font-normal italic">Must be a valid
+          date</span>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="flex flex-col items-center relative md:items-end">
+      <hr class="border-Light-grey w-full absolute top-1/2 translate-y-1/2 ">
+      <button id="calculate-button" class="bg-Purple rounded-full p-4 z-10 hover:bg-Off-black transition"><svg
+          xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-10 md:h-10" viewBox="0 0 46 44">
+          <g fill="none" stroke="#FFF" stroke-width="2">
+            <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+          </g>
+        </svg></button>
+    </div>
+    <div class="flex flex-col gap-2 text-6xl md:text-7xl">
+      <p class="font-extrabold italic text-Off-black"><span class="text-Purple mr-2" id="years-output">--</span>years
+      </p>
+      <p class="font-extrabold italic  text-Off-black"><span class="text-Purple mr-2" id="months-output">--</span>months
+      </p>
+      <p class="font-extrabold italic  text-Off-black"><span class="text-Purple mr-2" id="days-output">--</span>days</p>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Hamza dahmani</a>.
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
